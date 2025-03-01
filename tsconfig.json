@@ -9,6 +9,6 @@
     "forceConsistentCasingInFileNames": true,
     "resolveJsonModule": true
   },
-  "include": ["src/**/*", "../frontend/src/utils"],
+  "include": ["src/**/*", "../frontend/src/pages/cruditems/utils"],
   "exclude": ["node_modules"]
 }

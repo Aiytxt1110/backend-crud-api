@@ -4,6 +4,10 @@ import dotenv from 'dotenv';
 import { connectDB } from './config/db';
 import itemRoutes from './routes/itemRoutes';
 
+import authRoutes from './routes/authRoutes';
+import chatRoutes from './routes/chatRoutes';
+import setupWebsocket from './websocket';
+
 // Load environment variables
 dotenv.config();
 
@@ -33,6 +37,8 @@ connectDB();
 
 // Routes
 app.use('/api/items', itemRoutes);
+app.use('/api/auth', authRoutes);
+app.use('/api/chats', chatRoutes);
 
 // Basic route for testing
 app.get('/', (req, res) => {
